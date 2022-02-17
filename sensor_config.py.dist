@@ -5,12 +5,12 @@ import Adafruit_DHT
 SENSORS = [
 	{
 		'name': 'frag',
-		'type': DHT11,
+		'type': Adafruit_DHT.DHT11,
 		'pin': 17
 	},
 	{
 		'name': 'vent',
-		'type': AM2302,
+		'type': Adafruit_DHT.AM2302,
 		'pin': 4
 	}
 ]

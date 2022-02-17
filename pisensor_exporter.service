@@ -4,6 +4,6 @@ After=multi-user.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/root/pisensor/env/bin/python /root/pisensor_exporter/main.py
+ExecStart=/root/pisensor_exporter/env/bin/python /root/pisensor_exporter/main.py
 [Install]
 WantedBy=multi-user.target
