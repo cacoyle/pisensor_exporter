@@ -1,0 +1,9 @@
+[Unit]
+Description=pisensor_exporter
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /root/pisensor_exporter/test.py
+[Install]
+WantedBy=multi-user.target

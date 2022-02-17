@@ -8,18 +8,10 @@ from prometheus_client import start_http_server, Summary, Gauge
 
 import Adafruit_DHT
 
+import sensor_config as config
+
 def c_to_f(celcius):
     return float("%.2lf" % ((celcius * 9/5 + 32)))
-
-config = {
-    'sensors': [
-        {
-            'name': 'fridge_center',
-            'pin': 24,
-            'type': Adafruit_DHT.AM2302
-        }
-    ]
-}
 
 REQUEST_TIME = Summary(
     'request_processing_seconds',
@@ -28,7 +20,7 @@ REQUEST_TIME = Summary(
 
 class PiSensors(object):
     def collect(self):
-        for sensor in config['sensors']:
+        for sensor in config.SENSORS:
             t = GaugeMetricFamily(
                 'temp_sensor',
                 'Temperature Sensor',
