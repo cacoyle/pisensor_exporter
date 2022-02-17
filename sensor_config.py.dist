@@ -1,16 +1,16 @@
 #!env/bin/python
 
-from Adafruit_DHT import AM2302, DHT11
+import Adafruit_DHT
 
 SENSORS = [
-				{
-						'name': 'frag',
-						'type': DHT11,
-						'pin': 17
-				},
-				{
-						'name': 'vent',
-						'type': AM2302,
-						'pin': 4
-				}
+	{
+		'name': 'frag',
+		'type': DHT11,
+		'pin': 17
+	},
+	{
+		'name': 'vent',
+		'type': AM2302,
+		'pin': 4
+	}
 ]
